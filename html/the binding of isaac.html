@@ -1,0 +1,20 @@
+<body>
+<div id="container"> </div>
+
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container"); 
+            container.appendChild(player);
+            player.load({
+                url: "mig29.swf", 
+                backgroundColor: "#000", 
+             });
+            player.style.width = "640px"; 
+            player.style.height = "360px";
+        });
+    </script>
+</body>
